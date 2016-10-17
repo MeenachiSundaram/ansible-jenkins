@@ -72,7 +72,7 @@ Create an inventory file named it hosts, in the same directory as our playbook (
 
   ```
   [jenkins-packer]
-  jenkins-packer ansible_ssh_host=192.168.0.68 ansible_ssh_port=22 ansible_ssh_user=centos ansible_ssh_private_key_file=./jenkins-packer.pem
+  jenkins-packer ansible_ssh_host=<host ip> ansible_ssh_port=22 ansible_ssh_user=<host username> ansible_ssh_private_key_file=<location to pem key file>
   ```
 
 ## First Launch
