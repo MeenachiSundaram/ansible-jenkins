@@ -1,0 +1,5 @@
+---
+  - name: installing git & tree
+    apt:
+      name=git state=present
+      name=tree state=present

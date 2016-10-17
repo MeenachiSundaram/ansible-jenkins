@@ -1,0 +1,6 @@
+---
+  - name: Updating cache and installing openjdk-7-jre&jdk
+    apt:
+      update_cache=yes
+      name=openjdk-7-jre state=present
+      name=openjdk-7-jdk state=present
