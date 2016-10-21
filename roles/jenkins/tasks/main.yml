@@ -13,4 +13,5 @@
 
   - name: Installing jenkins
     apt:
+      update_cache=yes
       name=jenkins state=present

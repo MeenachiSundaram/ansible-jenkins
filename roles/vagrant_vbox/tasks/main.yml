@@ -1,0 +1,28 @@
+---
+
+  - name: Creating virtualbox.list
+    shell: sh -c 'echo deb http://download.virtualbox.org/virtualbox/debian trusty contrib > /etc/apt/sources.list.d/virtualbox.list'
+    args:
+      creates: /etc/apt/sources.list.d/virtualbox.list
+
+  - name: Adding oracle_vbox_2016 APT-Key
+    apt_key: url=https://www.virtualbox.org/download/oracle_vbox_2016.asc state=present
+
+  - name: Adding oracle_vbox APT-Key
+    apt_key: url=https://www.virtualbox.org/download/oracle_vbox.asc state=present
+
+  - name: Installing virtualbox
+    apt:
+      update_cache=yes
+      name=virtualbox-5.1 state=present
+
+  - name: Downloading vagrant
+    get_url:
+      url: https://releases.hashicorp.com/vagrant/1.8.6/vagrant_1.8.6_x86_64.deb
+      dest: /tmp/vagrant_1.8.6_x86_64.deb
+
+  - name: Installing vagrant
+    shell: dpkg -i vagrant_1.8.6_x86_64.deb
+    args:
+      chdir: /tmp/
+      creates: /usr/bin/vagrant

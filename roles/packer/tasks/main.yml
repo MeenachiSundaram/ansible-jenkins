@@ -1,0 +1,10 @@
+---
+    - name: Downloading packer
+      get_url:
+        url: https://releases.hashicorp.com/packer/0.10.2/packer_0.10.2_linux_amd64.zip
+        dest: /tmp/packer_0.10.2_linux_amd64.zip
+
+    - name: Installing packer
+      unarchive: src=/tmp/packer_0.10.2_linux_amd64.zip dest=/usr/bin/ copy=no
+      args:
+        creates: /usr/bin/packer

@@ -1,0 +1,8 @@
+---
+  - name: Configure
+    hosts: devops_docker_demo
+    become: yes
+    become_method: sudo
+    gather_facts: no
+    roles:
+        - docker

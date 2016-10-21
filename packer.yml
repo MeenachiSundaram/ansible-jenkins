@@ -5,6 +5,8 @@
     become_method: sudo
     gather_facts: no
     roles:
-        - git
+        - basic
         - java
         - jenkins
+        - vagrant_vbox
+        - packer

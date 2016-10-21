@@ -1,2 +1,5 @@
 [jenkins-packer]
-jenkins-packer ansible_ssh_host=192.168.0.68 ansible_ssh_port=22 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=./jenkins-packer.pem
+jenkins-packer ansible_ssh_host=192.168.0.21 ansible_ssh_port=22 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=centos-ansible.pem
+
+[devops_docker_demo]
+jenkins-packer ansible_ssh_host=192.168.0.59 ansible_ssh_port=22 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=devops_docker_demo.pem

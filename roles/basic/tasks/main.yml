@@ -1,0 +1,7 @@
+---
+  - name: installing git, tree, unzip, htop
+    apt:
+      name=git state=present
+      name=tree state=present
+      name=unzip state=present
+      name=htop state=present
